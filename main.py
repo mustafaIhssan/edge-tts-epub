@@ -7,18 +7,17 @@ import os
 
 from utils import get_chapters, get_save_path, generate, merge_audio_files
 
-## TODO: Change default values
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Script to convert EPUB chapters to audio files.")
 
-    parser.add_argument('--output-dir', type=str, default="./Shadow Slave/", help='Output directory for audio files')
-    parser.add_argument('--path', type=str, default="./Shadow Slave c1-1617.epub", help='Path to the EPUB file')
+    parser.add_argument('--output-dir', type=str, default="./audiobook/", help='Output directory for audio files')
+    parser.add_argument('--path', type=str, default="./example.epub", help='Path to the EPUB file')
     parser.add_argument('--voice', type=str, default="en-US-EricNeural", help='Voice to use in Text-to-Speech')
     parser.add_argument('--retry-attempts', type=int, default=10, help='Number of times to retry on failure')
     parser.add_argument('--max-concurrent-tasks', type=int, default=5, help='Limit the number of concurrent tasks')
     parser.add_argument('--dry-run', default=False, action='store_true', help='If set, will save the text to be spoken as a json file instead of actually speaking it')
-    parser.add_argument('--skip-chapters', type=int, default=3, help='Number of chapters to skip')
-    parser.add_argument('--skip-paragraphs', type=int, default=1, help='Number of paragraphs to skip')
+    parser.add_argument('--skip-chapters', type=int, default=0, help='Number of chapters to skip')
+    parser.add_argument('--skip-paragraphs', type=int, default=0, help='Number of paragraphs to skip')
     parser.add_argument('--start-chapter', type=int, default=0, help='Chapter number to start from')
     parser.add_argument('--end-chapter', type=int, default=0, help='Chapter number to end at')
     parser.add_argument('--clean-text', default=True, action='store_true', help='If set, will clean the text')

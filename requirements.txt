@@ -1,0 +1,6 @@
+argparse
+ebooklib
+tqdm
+beautifulsoup4
+edge-tts
+pydub
