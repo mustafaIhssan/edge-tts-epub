@@ -22,8 +22,8 @@ This project is a Python script to convert the chapters of an EPUB book into aud
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/epub-to-audio.git
-   cd epub-to-audio
+   git clone https://github.com/mustafaIhssan/edge-tts-epub
+   cd edge-tts-epub
    ```
 
 2. Install the required Python packages:
